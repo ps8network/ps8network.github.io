@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.navBar{
+    padding:20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    background-color: #FF2E63;  
+}
+.navLinks a{
+    color: white;
+    text-decoration: none;
+    /* margin: 0 10px; */
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.navLinks a:hover{
+    color: #FF2E63;
+    text-decoration: none;
+    /* margin: 0 10px;  */
+    background-color: white;
+    padding: 10px;
+}
