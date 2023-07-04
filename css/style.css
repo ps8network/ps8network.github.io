@@ -346,7 +346,7 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url("/img/bg1.jpg");
+    background-image: url("/img/bg3.jpg");
     background-repeat: no-repeat;
     background-size:cover;
 
@@ -436,7 +436,8 @@ main {
 .box form {
     position: absolute;
     inset: 4px;
-    background: url("/img/bg_1.jpg");
+    background:scroll;
+    background-blend-mode: screen;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 50px 40px;
