@@ -346,7 +346,9 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #23242a;
+    background-image: url("/img/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
 
 }
 
@@ -354,14 +356,89 @@ main {
     position: relative;
     width: 556px;
     height: 625px;
-    background: #1c1c1c;
+    background: transparent;
     border-radius: 8px;
+    overflow: hidden;
 }
+
+.box:before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 556px;
+    height: 625px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 556px;
+    height: 625px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+.borderline {
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+
+.borderline::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 556px;
+    height: 625px;
+    background: linear-gradient(0deg,transparent,transparent,#e32424,#e32424,#e32424);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+
+.borderline::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 556px;
+    height: 625px;
+    background: linear-gradient(0deg,transparent,transparent,#e32424,#e32424,#e32424);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 .box form {
     position: absolute;
     inset: 4px;
-    background: #222;
+    background: url("/img/bg_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 50px 40px;
     border-radius: 8px;
     z-index: 2;
@@ -372,6 +449,7 @@ main {
 .box form h2 {
     color: #fff;
     font-weight: 500;
+    font-size: 35px;
     text-align: center;
     letter-spacing: 01.em;
 }
@@ -433,3 +511,37 @@ main {
     height: 44px;
 }
 
+
+.box form .links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box form .links a {
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.box form .links a:hover,
+.box form .links a:nth-child(3) {
+    color: #fff;
+}
+
+.box form input[type="submit"]
+{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+}
+
+.box form input[type="submit"]:active {
+    opacity: 0.8;
+}
